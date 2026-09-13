@@ -967,10 +967,9 @@ body {
     color: var(--color-muted);
     transition: all 0.2s ease;
 }
-.social-link svg {
-    stroke: currentColor;
-    width: 20px;
-    height: 20px;
+.social-link i {
+    font-size: 20px;
+    line-height: 1;
 }
 .social-link:hover {
     border-color: var(--color-accent);

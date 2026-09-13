@@ -6,6 +6,12 @@
     <title data-i18n="meta.title">Oak Leaf Tree Service | Professional Tree Care</title>
     <meta name="description" content="Safe, reliable tree removal, trimming, pruning, and storm cleanup. Family-owned, licensed, and insured. Get a free estimate today.">
 
+    <!-- Favicon (reuses the existing logo icon) -->
+    <link rel="icon" type="image/svg+xml" href="images/oak-leaf.svg">
+
+    <!-- Canonical URL -- REPLACE with this client's real live domain when the site is deployed -->
+    <link rel="canonical" href="https://www.example.com/">
+
     <!-- Open Graph / Social Meta Tags -->
     <meta property="og:title" content="Oak Leaf Tree Service | Professional Tree Care">
     <meta property="og:description" content="Safe, reliable tree removal, trimming, pruning, and storm cleanup. Family-owned, licensed, and insured. Get a free estimate today.">
@@ -19,6 +25,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <!--
+        LocalBusiness structured data. REPLACE every placeholder value below
+        (address, geo coordinates, real domain, real hours) with this
+        client's actual details when building their site -- this template
+        version uses the same placeholder info shown elsewhere on the page.
+    -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LandscapingBusiness",
+        "name": "Oak Leaf Tree Service",
+        "image": "https://www.example.com/images/oak-leaf.svg",
+        "telephone": "+15551234567",
+        "email": "info@oakleaftreeservice.com",
+        "url": "https://www.example.com/",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "REPLACE WITH REAL ADDRESS",
+            "addressLocality": "Oakville",
+            "addressRegion": "REPLACE WITH REAL STATE",
+            "postalCode": "REPLACE",
+            "addressCountry": "US"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+        },
+        "sameAs": []
+    }
+    </script>
+
 </head>
 <body>
 
@@ -284,6 +325,8 @@
                     </div>
                 </div>
                 <form class="contact-form" id="estimateForm" novalidate>
+                    <!-- TEST client_id -- points at the throwaway "TEST — Do Not Use" Client record so test submissions land in support@misterlander.com. Replace with the real Client page ID when this template is built for an actual client. -->
+                    <input type="hidden" name="client_id" value="3d96f1d3-4f68-81e6-9319-f28a2679a45a">
                     <div class="form-group">
                         <label for="formName"><span data-i18n="contact.form.name">Full Name</span> <span aria-hidden="true">*</span></label>
                         <input type="text" id="formName" name="name" required autocomplete="name" aria-required="true" aria-describedby="formName-error" />

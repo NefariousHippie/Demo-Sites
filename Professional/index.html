@@ -6,12 +6,18 @@
     <title>Precision Tree Service | Professional Tree Care</title>
     <meta name="description" content="Fast, safe, and professional tree removal, storm cleanup, and emergency services. Available 24/7.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Canonical URL -- REPLACE with this client's real live domain when the site is deployed -->
+    <link rel="canonical" href="https://www.example.com/">
+
     <!-- Open Graph / Social Meta Tags -->
     <meta property="og:title" content="Precision Tree Service | Professional Tree Care">
     <meta property="og:description" content="Fast, safe, and professional tree removal, storm cleanup, and emergency services. Available 24/7.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/bucket-truck.webp">
-    <meta property="og:url" content="#">
+    <meta property="og:url" content="https://www.example.com/">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Precision Tree Service | Professional Tree Care">
     <meta name="twitter:description" content="Fast, safe, and professional tree removal, storm cleanup, and emergency services. Available 24/7.">
@@ -27,6 +33,48 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!--
+        LocalBusiness structured data. REPLACE every placeholder value below
+        (address, geo coordinates, real domain, real hours) with this
+        client's actual details when building their site.
+    -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LandscapingBusiness",
+        "name": "Precision Tree Service",
+        "image": "https://www.example.com/images/precision-logo.webp",
+        "telephone": "+15551234567",
+        "email": "info@precisiontree.com",
+        "url": "https://www.example.com/",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "REPLACE WITH REAL ADDRESS",
+            "addressLocality": "REPLACE WITH REAL CITY",
+            "addressRegion": "REPLACE WITH REAL STATE",
+            "postalCode": "REPLACE",
+            "addressCountry": "US"
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "07:00",
+                "closes": "18:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "08:00",
+                "closes": "16:00"
+            }
+        ],
+        "sameAs": []
+    }
+    </script>
+
 </head>
 <body>
 
@@ -369,6 +417,9 @@
                 </div>
 
                 <form class="contact-form" aria-label="Free estimate request form">
+                    <!-- TEST client_id -- points at the throwaway "TEST — Do Not Use" Client record so test submissions land in support@misterlander.com. Replace with the real Client page ID when this template is built for an actual client. -->
+                    <input type="hidden" name="client_id" value="3d96f1d3-4f68-81e6-9319-f28a2679a45a">
+
                     <p class="form-required-note"><span class="required-star">*</span> Required fields</p>
 
                     <div class="form-row">
@@ -441,23 +492,16 @@
                     <p>Professional tree care services for residential and commercial properties. Keeping our community's trees safe and healthy.</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Facebook" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-                            </svg>
+                            <i class="ti ti-brand-facebook" aria-hidden="true"></i>
                         </a>
                         <a href="#" aria-label="Instagram" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                            </svg>
+                            <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="social-link">
+                            <i class="ti ti-brand-youtube" aria-hidden="true"></i>
                         </a>
                         <a href="#" aria-label="TikTok" class="social-link">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M9 12a4 4 0 100 8 4 4 0 000-8z"/>
-                                <path d="M15 8a4 4 0 01-4-4h-2v12"/>
-                                <path d="M15 8a4 4 0 004-4h-4v12"/>
-                            </svg>
+                            <i class="ti ti-brand-tiktok" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>

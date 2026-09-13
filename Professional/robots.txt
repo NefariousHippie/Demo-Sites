@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# REPLACE the placeholder domain below with this client's real live domain when the site is deployed
+Sitemap: https://www.example.com/sitemap.xml

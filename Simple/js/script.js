@@ -185,29 +185,52 @@
             return;
         }
 
-        // Success
-        const formGroups = form.querySelectorAll('.form-group');
+        // Submit to the Mr. Lander Client CTAs Worker
         const submitBtn = form.querySelector('button[type="submit"]');
-        const disclaimer = form.querySelector('.form-disclaimer');
-
-        formGroups.forEach(function(g) { g.style.display = 'none'; });
-        if (submitBtn) submitBtn.style.display = 'none';
-        if (disclaimer) disclaimer.style.display = 'none';
-
-        if (successDiv) {
-            successDiv.removeAttribute('hidden');
-            successDiv.setAttribute('role', 'status');
-            successDiv.focus();
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
         }
 
-        // Log for debugging
         const data = new FormData(form);
-        console.log('📬 Form data (ready for backend):');
-        for (let [key, value] of data.entries()) {
-            console.log(`${key}: ${value}`);
-        }
 
-        form.reset();
+        fetch('https://mr-lander-client-ctas.the-visibility-specialist.workers.dev/', {
+            method: 'POST',
+            body: data
+        })
+            .then(function (res) {
+                return res.json().then(function (json) {
+                    return { ok: res.ok, json: json };
+                });
+            })
+            .then(function (result) {
+                if (!result.ok || !result.json.ok) {
+                    throw new Error((result.json && result.json.error) || 'Submission failed');
+                }
+
+                const formGroups = form.querySelectorAll('.form-group');
+                const disclaimer = form.querySelector('.form-disclaimer');
+
+                formGroups.forEach(function(g) { g.style.display = 'none'; });
+                if (submitBtn) submitBtn.style.display = 'none';
+                if (disclaimer) disclaimer.style.display = 'none';
+
+                if (successDiv) {
+                    successDiv.removeAttribute('hidden');
+                    successDiv.setAttribute('role', 'status');
+                    successDiv.focus();
+                }
+
+                form.reset();
+            })
+            .catch(function (err) {
+                console.error('Submission error:', err);
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Get a Free Estimate';
+                }
+                alert('Something went wrong submitting your request. Please call us directly at (555) 123-4567.');
+            });
     });
 })();
 

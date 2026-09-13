@@ -220,16 +220,38 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = 'Sending...';
             submitBtn.disabled = true;
 
-            setTimeout(function() {
-                const successMsg = document.createElement('div');
-                successMsg.setAttribute('role', 'status');
-                successMsg.style.cssText =
-                    'text-align: center; padding: 2rem 0; color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-mono);';
-                successMsg.textContent = '✓ Thank you! Your request has been received. We will contact you within 24 hours.';
+            const formEl = this;
+            const data = new FormData(formEl);
 
-                contactForm.innerHTML = '';
-                contactForm.appendChild(successMsg);
-            }, 1200);
+            fetch('https://mr-lander-client-ctas.the-visibility-specialist.workers.dev/', {
+                method: 'POST',
+                body: data
+            })
+                .then(function (res) {
+                    return res.json().then(function (json) {
+                        return { ok: res.ok, json: json };
+                    });
+                })
+                .then(function (result) {
+                    if (!result.ok || !result.json.ok) {
+                        throw new Error((result.json && result.json.error) || 'Submission failed');
+                    }
+
+                    const successMsg = document.createElement('div');
+                    successMsg.setAttribute('role', 'status');
+                    successMsg.style.cssText =
+                        'text-align: center; padding: 2rem 0; color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-family: var(--font-mono);';
+                    successMsg.textContent = '✓ Thank you! Your request has been received. We will contact you within 24 hours.';
+
+                    formEl.innerHTML = '';
+                    formEl.appendChild(successMsg);
+                })
+                .catch(function (err) {
+                    console.error('Submission error:', err);
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Get a Free Estimate';
+                    alert('Something went wrong submitting your request. Please call us directly at (555) 123-4567.');
+                });
         });
     }
 
