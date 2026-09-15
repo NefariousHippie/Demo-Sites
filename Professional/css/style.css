@@ -152,7 +152,7 @@ body {
     color: var(--color-text);
     white-space: nowrap;
 }
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     .logo-text { font-size: 0.85rem; }
     .logo-img { height: 32px; }
 }
@@ -486,7 +486,7 @@ body {
     align-items: center;
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .about-inner { grid-template-columns: 1fr 1fr; }
 }
 .about-image img {
@@ -499,7 +499,7 @@ body {
     box-shadow: var(--shadow-lg);
 }
 .about-content { text-align: center; }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .about-content { text-align: left; }
 }
 .about-content .section-eyebrow { display: block; }
@@ -625,7 +625,7 @@ body {
     font-family: var(--font-sans);
 }
 .lightbox-close:hover { color: var(--color-accent); }
-@media (max-width: 600px) {
+@media (max-width: 37.5rem) {
     .lightbox-dialog img { max-width: 95vw; max-height: 70vh; }
     .lightbox-close { top: -44px; font-size: 2rem; }
 }
@@ -758,7 +758,7 @@ body {
     gap: var(--space-12);
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .contact-inner { grid-template-columns: 1fr 1.2fr; }
 }
 
@@ -824,7 +824,7 @@ body {
     gap: var(--space-6);
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .form-row {
         grid-template-columns: 1fr 1fr;
     }
@@ -1010,20 +1010,20 @@ body {
 /* === RESPONSIVE BREAKPOINTS === */
 
 /* Desktop: show full nav, hide hamburger */
-@media (min-width: 992px) {
+@media (min-width: 62rem) {
     .nav-desktop { display: block; }
     .mobile-menu-btn { display: none; }
     .mobile-menu { display: none !important; }
 }
 
 /* Hide phone and quote button in header until the full desktop nav appears */
-@media (max-width: 991px) {
+@media (max-width: 61.9375rem) {
     #phone-link,
     #quote-btn { display: none !important; }
 }
 
 /* Mobile: content alignment */
-@media (max-width: 767px) {
+@media (max-width: 47.9375rem) {
     .about-content { text-align: center; }
     .about-content .section-eyebrow { display: inline-block; }
 
@@ -1050,14 +1050,14 @@ body {
 }
 
 /* Desktop: left align the about list */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .about-list li {
         justify-content: flex-start;
     }
 }
 
 /* Small screens */
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     .trust-bar-inner {
         gap: var(--space-2);
         font-size: 0.7rem;

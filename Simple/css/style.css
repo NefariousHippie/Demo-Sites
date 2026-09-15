@@ -540,10 +540,10 @@ section.hero-section {
     gap: var(--space-6);
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     .services-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
@@ -579,7 +579,7 @@ section.hero-section {
     margin: 0 auto;
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .why-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -603,10 +603,10 @@ section.hero-section {
     list-style: none;
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .process-steps { grid-template-columns: repeat(2, 1fr); }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     .process-steps { grid-template-columns: repeat(4, 1fr); }
 }
 
@@ -645,7 +645,7 @@ section.hero-section {
     margin: 0 auto var(--space-6) auto;
     grid-template-columns: 1fr 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .area-list { grid-template-columns: repeat(4, 1fr); }
 }
 
@@ -667,10 +667,10 @@ section.hero-section {
     gap: var(--space-6);
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     .reviews-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
@@ -709,7 +709,7 @@ section.hero-section {
     gap: var(--space-8);
     align-items: start;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .contact-grid { grid-template-columns: 1fr 1.2fr; }
 }
 
@@ -845,7 +845,7 @@ section.hero-section {
     margin-bottom: var(--space-6);
     grid-template-columns: 1fr;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.5fr; }
 }
 
@@ -942,7 +942,7 @@ section.hero-section {
 /* ===== RESPONSIVE BREAKPOINTS (Page-level only) ===== */
 
 /* Desktop: show full nav, hide hamburger */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .primary-nav {
         display: flex !important;
         position: static;
@@ -982,12 +982,12 @@ section.hero-section {
 }
 
 /* Mobile: hide phone and quote button in header */
-@media (max-width: 767px) {
+@media (max-width: 47.9375rem) {
     .nav-cta { display: none !important; }
 }
 
 /* Small screens */
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     .hero-section {
         padding: var(--space-6) 0 var(--space-8) 0;
     }
@@ -1014,7 +1014,7 @@ section.hero-section {
 }
 
 /* Tablet and above: page-level layout */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
     .hero-section {
         padding: var(--space-12) 0 var(--space-16) 0;
     }
@@ -1026,6 +1026,6 @@ section.hero-section {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
     .container { padding: 0 2rem; }
 }
